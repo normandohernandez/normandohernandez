@@ -3,7 +3,7 @@
 <br />
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/normandohernandez/normandohernandez/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/normandohernandez/normandohernandez/output/snake-light.svg" />
-  <img alt="A snake eating my contribution graph" src="https://raw.githubusercontent.com/normandohernandez/normandohernandez/output/snake-light.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/normandohernandez/normandohernandez/output/splatter-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/normandohernandez/normandohernandez/output/splatter-light.svg" />
+  <img alt="My contribution graph as paint splatter: every commit day is a drop of paint" src="https://raw.githubusercontent.com/normandohernandez/normandohernandez/output/splatter-light.svg" width="100%" />
 </picture>

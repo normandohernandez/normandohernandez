@@ -1,0 +1,37 @@
+name: paint splatter
+
+on:
+  schedule:
+    - cron: "17 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch contributions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/fetch_contributions.py ${{ github.repository_owner }} grid.json
+
+      - name: Paint the graph
+        run: |
+          mkdir -p dist
+          python3 .github/scripts/gen_splatter.py grid.json dist/splatter-light.svg light
+          python3 .github/scripts/gen_splatter.py grid.json dist/splatter-dark.svg dark
+
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "Repaint contribution graph"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

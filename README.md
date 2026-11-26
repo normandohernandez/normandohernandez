@@ -1,4 +1,4 @@
-<img src="assets/banner.svg" alt="i build agents. sometimes they work. Normando Hernández, computer science and engineering, Puerto Rico." width="100%" />
+<img src="assets/banner.svg" alt="A printed receipt: research the problem, build the agent, fix the agent's code, fix the fix, café. Total: it works, sometimes. i build agents." width="100%" />
 
 <br />
 
